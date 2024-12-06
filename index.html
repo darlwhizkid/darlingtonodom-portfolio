@@ -37,6 +37,20 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
+
+    <!-- Add this before </head> -->
+<style>
+  /* Adjust Tawk.to widget position */
+  #tawk-to-iframe-container {
+    margin-bottom: 60px !important; /* Adds space above the chat widget */
+  }
+  
+  /* Ensure back-to-top button stays above chat */
+  .back-to-top {
+    z-index: 99999 !important;
+  }
+</style>
+
   </head>
 
   <body>
