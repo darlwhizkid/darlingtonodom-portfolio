@@ -1,6 +1,6 @@
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
+    event.preventDefault(); // Prevents the default form submission
+
     emailjs.sendForm('service_1i0tv8c', 'template_qc4jfo', this)
         .then(function() {
             document.querySelector('.sent-message').style.display = 'block';
@@ -12,13 +12,3 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             document.querySelector('.sent-message').style.display = 'none';
         });
 });
-
-console.log("Form submitted");
-emailjs.sendForm('service_1i0tv8c', 'template_qc4jfo', this)
-    .then(function() {
-        alert("Message sent successfully");
-        // existing success code...
-    }, function(error) {
-        alert("Error sending message:", error);
-        // existing error code...
-    });
